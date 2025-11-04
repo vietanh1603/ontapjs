@@ -30,5 +30,5 @@ addBtn.addEventListener('click', addTask)
 taskList.addEventListener('click', (e) => {
   const target = e.target
   const checkbox = document.querySelector('input[type = "checkbox"]')
-  if(target.tagName === 'LI'|| ) {}
+  
 })
