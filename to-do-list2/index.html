@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- to do app -->
+      <div class="to-do-app">
+        <h1>To Do List</h1>
+        <div class="to-do">
+          <input type="text" id="to-do" placeholder="Add your task" />
+          <button>ADD</button>
+        </div>
+        <h2>Task List</h2>
+        <ul class="task-list">
+        </ul>
+      </div>
+      <!-- edit popup -->
+      <div class="edit-popup">
+        <div class="overlay">
+          <div class="popup-container">
+            <h2>Edit your task</h2>
+            <input type="text" id="edit-task" placeholder="Edit your task" />
+            <div class="action">
+              <button class="btn edit-btn">Edit</button>
+              <button class="btn del-btn">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- delete popup -->
+      <div class="delete-popup">
+        <div class="overlay">
+          <div class="popup-container">
+            <h2>Are you sure you want to delete this task?</h2>
+            <div class="action">
+              <button class="btn edit-btn">Yes</button>
+              <button class="btn del-btn">No</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+
+</html>
