@@ -37,7 +37,7 @@ input {
   border: none;
 }
 .container {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background: blanchedalmond;
   padding-top: 100px;
@@ -93,6 +93,7 @@ input {
   border-radius: 5px;
   border: 1px solid #fff;
   margin-bottom: 10px;
+  user-select: none;
 }
 .task-list li .desc span {
   user-select: none;
