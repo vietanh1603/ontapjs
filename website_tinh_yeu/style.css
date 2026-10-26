@@ -5,7 +5,9 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Open Sans", sans-serif !important;
+   font-family: "Cormorant Garamond", serif !important;
+     font-optical-sizing: auto;
+
 }
 
 :root {
@@ -83,15 +85,14 @@ body {
     }
 }
 
-/* =========================================================
-   TIÊU ĐỀ
-   ========================================================= */
+/* tieu de */
 
 .small-title {
     font-size: 15px;
     letter-spacing: 1px;
     margin-bottom: 22px;
     color: #9b5b6f;
+    font-family: "Roboto Slab", serif !important;
 }
 
 h1 {

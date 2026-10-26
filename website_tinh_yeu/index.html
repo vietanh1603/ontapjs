@@ -6,6 +6,15 @@
   <title>Gửi Tặng Em ❤️</title>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="vutru.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Playwrite+AR+Guides&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+<link href="
+https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css
+" rel="stylesheet">
 </head>
 <body>
   <div id="hearts"></div>
@@ -35,10 +44,10 @@
     <section id="letterScreen" class="screen">
       <div class="letter-card">
         <div class="flower">🌷</div>
-        <h2>Gửi Tặng Em ❤️</h2>
+        <h2>Gửi Tặng Vợ Iu ❤️</h2>
 
         <div class="letter-content">
-          <p>Em à,</p>
+          <p>Vợ iu à,</p>
           <p>
             Có những điều đôi khi thật khó nói thành lời,
             nên anh muốn viết tất cả vào một bức thư nhỏ này.
@@ -117,9 +126,40 @@
      </div>
   </main>
   <!-- Nhạc nền: đổi file thành music.mp3 nếu muốn dùng -->
-  <!-- <audio id="music" loop>
-    <source src="music.mp3" type="audio/mpeg">
-  </audio> -->
+  <audio id="audioPlayer" controls></audio>
+<div id="trackInfo">Đang phát: Không có</div>
+
+<script>
+
+  const playlist = [
+    { title: "Bài hát 1", src: "music2.mp3" },
+    { title: "Bài hát 2", src: "music.mp3" },
+    { title: "Bài hát 2", src: "music3.mp3" }
+  ];
+
+  const audioPlayer = document.getElementById("audioPlayer");
+  const trackInfo = document.getElementById("trackInfo");
+
+  // Hàm chọn bài hát ngẫu nhiên
+  function playRandomTrack() {
+    const randomIndex = Math.floor(Math.random() * playlist.length);
+    const selectedTrack = playlist[randomIndex];
+    
+    audioPlayer.src = selectedTrack.src;
+    trackInfo.textContent = "Đang phát: " + selectedTrack.title;
+    audioPlayer.play();
+  }
+
+  // Khi tải trang xong thì phát ngẫu nhiên 1 bài
+  window.onload = function() {
+    playRandomTrack();
+  };
+
+  // Khi bài hát kết thúc, tự động chọn bài ngẫu nhiên tiếp theo
+  audioPlayer.onended = function() {
+    playRandomTrack();
+  };
+</script>
   <script type="importmap">
             {
                 "imports": {
