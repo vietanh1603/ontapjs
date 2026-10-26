@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gửi Tặng Em ❤️</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="vutru.css">
+</head>
+<body>
+  <div id="hearts"></div>
+
+  <main class="app">
+    <!-- MÀN HÌNH 1: PHONG THƯ -->
+    <section id="home" class="screen active">
+      <p class="small-title">💌 Một điều đặc biệt dành cho em</p>
+
+      <div class="envelope-wrap" id="openEnvelope" role="button" tabindex="0">
+        <div class="envelope">
+          <div class="envelope-back"></div>
+          <div class="letter-preview">
+            <span>Gửi Tặng Em</span>
+            <small>❤️</small>
+          </div>
+          <div class="envelope-front"></div>
+          <div class="heart-seal">♥</div>
+        </div>
+      </div>
+
+      <h1>Gửi Tặng Em</h1>
+      <p class="hint">Chạm vào trái tim để mở thư</p>
+    </section>
+
+    <!-- MÀN HÌNH 2: BỨC THƯ -->
+    <section id="letterScreen" class="screen">
+      <div class="letter-card">
+        <div class="flower">🌷</div>
+        <h2>Gửi Tặng Em ❤️</h2>
+
+        <div class="letter-content">
+          <p>Em à,</p>
+          <p>
+            Có những điều đôi khi thật khó nói thành lời,
+            nên anh muốn viết tất cả vào một bức thư nhỏ này.
+          </p>
+          <p>
+            Cảm ơn em vì đã xuất hiện, vì những nụ cười,
+            những khoảnh khắc và những điều thật đẹp mà em mang đến.
+          </p>
+          <p>
+            Mong rằng mỗi ngày của em đều thật vui,
+            thật nhiều yêu thương và luôn có những người
+            khiến em mỉm cười. ❤️
+          </p>
+          <p class="signature">Thương em,<br><b>Vanh đẹp trai</b></p>
+        </div>
+
+        <button class="next-btn" id="toGallery">Xem tiếp ❤️</button>
+      </div>
+    </section>
+
+    <!-- MÀN HÌNH 3: Vũ trụ -->
+     <div class="vutru">
+        <div id="loading">Đang mở vũ trụ của chúng mình... ✦</div>
+
+        <div id="hud">
+            <div class="brand">
+                <div class="eyebrow">OUR LOVE UNIVERSE</div>
+                <h1>Vũ Trụ Tình Yêu</h1>
+                <p>Mỗi vì sao là một kỷ niệm của chúng ta.</p>
+            </div>
+
+            <div class="help">
+                <span>🖱 Kéo để xoay</span>
+                <span>🔍 Cuộn để tiến gần</span>
+                <span>⭐ Chạm vào vì sao</span>
+            </div>
+
+            <div class="counter" id="counter">0 / 0 kỷ niệm</div>
+        </div>
+
+        <div id="memoryModal" aria-hidden="true">
+            <div class="modal-backdrop"></div>
+            <article class="memory-card">
+                <button id="closeModal" class="close" type="button">×</button>
+                <div class="memory-image">
+                    <div class="memory-photo-container">
+                        <button
+                            id="prevPhoto"
+                            class="photo-nav prev"
+                            type="button"
+                        >
+                            ‹
+                        </button>
+
+                        <img id="memoryPhoto" src="" alt="" />
+
+                        <button
+                            id="nextPhoto"
+                            class="photo-nav next"
+                            type="button"
+                        >
+                            ›
+                        </button>
+                    </div>
+
+                    <div id="photoCounter" class="photo-counter">1 / 1</div>
+                </div>
+                <div class="memory-info">
+                    <span id="memoryDate"></span>
+                    <h2 id="memoryTitle"></h2>
+                    <p id="memoryText"></p>
+                    <div class="memory-number" id="memoryNumber"></div>
+                </div>
+            </article>
+        </div>
+     </div>
+  </main>
+  <!-- Nhạc nền: đổi file thành music.mp3 nếu muốn dùng -->
+  <!-- <audio id="music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio> -->
+  <script type="importmap">
+            {
+                "imports": {
+                    "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+                    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+                }
+            }
+        </script>
+
+        <script src="memories.js"></script>
+        <script type="module" src="vutru.js"></script>
+  <script type="module" src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Vũ Trụ Tình Yêu</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div id="loading">Đang mở vũ trụ của chúng mình... ✦</div>
+
+        <div id="hud">
+            <div class="brand">
+                <div class="eyebrow">OUR LOVE UNIVERSE</div>
+                <h1>Vũ Trụ Tình Yêu</h1>
+                <p>Mỗi vì sao là một kỷ niệm của chúng ta.</p>
+            </div>
+
+            <div class="help">
+                <span>🖱 Kéo để xoay</span>
+                <span>🔍 Cuộn để tiến gần</span>
+                <span>⭐ Chạm vào vì sao</span>
+            </div>
+
+            <div class="counter" id="counter">0 / 0 kỷ niệm</div>
+        </div>
+
+        <div id="memoryModal" aria-hidden="true">
+            <div class="modal-backdrop"></div>
+            <article class="memory-card">
+                <button id="closeModal" class="close" type="button">×</button>
+                <div class="memory-image">
+                    <div class="memory-photo-container">
+                        <button
+                            id="prevPhoto"
+                            class="photo-nav prev"
+                            type="button"
+                        >
+                            ‹
+                        </button>
+
+                        <img id="memoryPhoto" src="" alt="" />
+
+                        <button
+                            id="nextPhoto"
+                            class="photo-nav next"
+                            type="button"
+                        >
+                            ›
+                        </button>
+                    </div>
+
+                    <div id="photoCounter" class="photo-counter">1 / 1</div>
+                </div>
+                <div class="memory-info">
+                    <span id="memoryDate"></span>
+                    <h2 id="memoryTitle"></h2>
+                    <p id="memoryText"></p>
+                    <div class="memory-number" id="memoryNumber"></div>
+                </div>
+            </article>
+        </div>
+        <script type="importmap">
+            {
+                "imports": {
+                    "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+                    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+                }
+            }
+        </script>
+
+        <!-- 2. Thẻ gọi file chạy chính (đặt trước thẻ đóng </body>) -->
+        <script src="memories.js"></script>
+        <script type="module" src="script.js"></script>
+    </body>
+</html>
